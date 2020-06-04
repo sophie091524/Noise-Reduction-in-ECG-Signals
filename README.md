@@ -2,17 +2,17 @@
 
 In this project, a denoising autoencoder (DAE) using fully convolutional network(FCN) is proposed for ECG signal denoising. Meanwhile, the proposed FCN-based DAE can perform compression with regard to the DAE architecture. 
 
-The motivation of the project is because in real-world scenario, ECG signals are prone to be contaminated by different kinds of noise, such as baseline wander (BW), muscle artifact (MA), and electrode motion (EM) [1]. All these noises may cause deformations on ECG waveforms and mask tiny features that are important for diagnosis. Accordingly, the removal of noises from ECG signals becomes necessary.
+The motivation of this project is because in real-world scenario, ECG signals are prone to be contaminated by different kinds of noise, such as baseline wander (BW), muscle artifact (MA), and electrode motion (EM) [1]. All these noises may cause deformations on ECG waveforms and mask tiny features that are important for diagnosis. Accordingly, the removal of noises from ECG signals becomes necessary.
 
 ## Proposed FCN-based DAE
 The proposed FCN-based DAE consists of an encoder and a decoder with 13 layers as shown in below. 
 插圖???
 
-## EXPERIMENTS
+## Experiments
 ### Experimental Data
-We employ MIT-BIH Arrhythmia database [2] for denoising ECG signals. Real noises including BW, MA and EM were collected from the MIT-BIH Noise Stress Test Database (NSTDB). All signals are normalized so that the amplitudes of the sampling points lay between 0 and 1 as a preliminary operation [3].
+We employ MIT-BIH Arrhythmia database [2] for denoising ECG signals. Real noises including BW, MA and EM were collected from the MIT-BIH Noise Stress Test Database (NSTDB). 
 
-The dataset was split into 80% training, 10% validation and the remaining 10% were used to evaluate the denoising models. All training data are corrupted with input SNR of -2.5, 0, 2.5, 5 and 7.5 dB. Both training and validation sets share the same SNR levels, and the testing set consisted of 3 different levels of input SNR of -1,3 and 7dB. All signals were normalized as a preliminary operation, so that the amplitudes of the sampling points laid between 0 and 1 [4].
+The dataset was split into 80% training, 10% validation and the remaining 10% were used to evaluate the denoising models. All training data are corrupted with input SNR of -2.5, 0, 2.5, 5 and 7.5 dB. Both training and validation sets share the same SNR levels, and the testing set consisted of 3 different levels of input SNR of -1,3 and 7dB. All signals were normalized as a preliminary operation so that the amplitudes of the sampling points laid between 0 and 1 [3].
 
 ### Experimental Results
 The denoising performance is compared to DNN based and CNN based DAE. As it can be seen, FCN performs better denoising of the ECG signal as compared to the two other approaches, as higher SNR_imp denotes more resemblance to clean signals. We can also observed that the RMSE and PRD values are lower for the proposed work as desired. These results demonstrate that FCN can achieve promising performance in reconstructing a denoised output signal form the original ECG in all noise levels compared to DNN and CNN.
@@ -24,10 +24,6 @@ For visual assessment, we can clearly observe that DNN appears a severe loss of 
 Overall, both quantitative and visual comparisons demonstrate that FCN gains an advantage over compared methods in terms of noise reduction and clinical detail preservation.
 
 ## Discussion
-The experimental results have found that FCN outperform DNN and CNN, especially with DNN having the worst performance. This failing may be attributed to the limitation of fully connected layers.
- Because the weight vectors in fully connected layers have high correlation with each other, spatial information in DNN is lost.
-
-In DNN and CNN, the output layer and last hidden layer are fully connected where each neuron has complete connections to all the neurons in the previous layer. As shown in Fig. 7(a), in output layer m, each neuron has full connection with all   the units in the last hidden layer m 1. Because the weight vectors in fully connected layers have high correlation with each other, spatial information in DNN is lost. In contrast,   the convolutional layers in FCN have the property of local connectivity. Each neuron only depends on a small region of the previous layer which is called the receptive field. The input features share the same weights within receptive field
- This architecture confines local patterns and enable FCN to have the ability to extract and preserve local information effectively.
- This failing may be attributed to the limitation of fully connected layers. Because the amplitude   of QRS complexes is much higher than the remainder  of  ECG signals, DNN may be influenced by global properties and sacrifice this component during optimization process. This may be unsuitable to utilize feature representations from fully connected layers because of the spatial information loss [31]. Consequently, DNN may not reconstruct ECG waveforms as precisely as FCN.
+The experimental results have found that FCN outperform DNN and CNN, especially with DNN having the worst performance. This failing may be attributed to the limitation of fully connected layers. When generating waveforms, fully connected layers have high correlation with each other which result in the loss of spatial information. In contrast, the convolutional layers have the property of local connectivity. Each neuron only depends on a small region of the previous layer which is called the receptive field. The input features share the same weights within receptive field confining local patterns and enable FCN to have the ability to extract and preserve local information effectively.
+ 
 ## Publication
