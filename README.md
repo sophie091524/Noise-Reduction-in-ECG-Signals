@@ -29,4 +29,6 @@ The experimental results have found that FCN outperform DNN and CNN, especially 
 ## Conclusion
 To the best of our knowledge, this is the first study on 1-D ECG signal using FCN-based DAE for the process of noise removal. Performances of our algorithm shows higher SNRimp, lower RMSE and  lower PRD compared to DNN- and CNN- based DAEs with the same compression ratio. Additionally, the proposed method obtains high compression performance, where each ECG signals with 1024 samples can be successfully reconstructed by representing only 32 dimensions. With high noise reduction and low signal distortion, the practicality and superiority of our method is suitable for clinical diagnosis.
 
+## References
+
 ## Publication
