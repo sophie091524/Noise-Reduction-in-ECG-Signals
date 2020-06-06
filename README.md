@@ -24,7 +24,7 @@ Overall, both quantitative and visual comparisons demonstrate that FCN gains an 
 
 ## Discussion
 The experimental results have found that FCN outperform DNN and CNN, especially with DNN having the worst performance. This failing may be attributed to the limitation of fully connected layers. When generating waveforms, fully connected layers have high correlation with each other which result in the loss of spatial information. In contrast, the convolutional layers have the property of local connectivity. Each neuron only depends on a small region of the previous layer which is called the receptive field. The input features share the same weights within receptive field confining local patterns and enable FCN to have the ability to extract and preserve local information effectively.
-<div align=center><img width="450" height="150" src="https://github.com/sophie091524/Noise-Reduction-in-ECG-Signals/blob/master/pic/fcl_cl.jpg"/></div>
+<div align=center><img width="500" height="200" src="https://github.com/sophie091524/Noise-Reduction-in-ECG-Signals/blob/master/pic/fcl_cl.jpg"/></div>
 
 ## Conclusion
 To the best of our knowledge, this is the first study on 1-D ECG signal using FCN-based DAE for the process of noise removal. Performances of our algorithm shows higher SNRimp, lower RMSE and  lower PRD compared to DNN- and CNN- based DAEs with the same compression ratio. Additionally, the proposed method obtains high compression performance, where each ECG signals with 1024 samples can be successfully reconstructed by representing only 32 dimensions. With high noise reduction and low signal distortion, the practicality and superiority of our method is suitable for clinical diagnosis.
