@@ -30,5 +30,10 @@ The experimental results have found that FCN outperform DNN and CNN, especially 
 To the best of our knowledge, this is the first study on 1-D ECG signal using FCN-based DAE for the process of noise removal. Performances of our algorithm shows higher SNRimp, lower RMSE and  lower PRD compared to DNN- and CNN- based DAEs with the same compression ratio. Additionally, the proposed method obtains high compression performance, where each ECG signals with 1024 samples can be successfully reconstructed by representing only 32 dimensions. With high noise reduction and low signal distortion, the practicality and superiority of our method is suitable for clinical diagnosis.
 
 ## References
+[1] P. Xiong, H. Wang, M. Liu, S. Zhou, Z. Hou, and X. Liu, “Ecg signal enhancement based on improved denoising auto-encoder,” Engineering Applications of Artificial Intelligence, vol. 52, pp. 194–202, 2016.
+
+[2] R. Mark and G. Moody. (1997, May) MIT-BIH Arrhythmia Database. [Online]. Available: http://ecg.mit.edu/dbinfo.html
+
+[3] O. Yildirim, R. San Tan,  and U. R. Acharya, “An  efficient compres-   sion of ecg signals using deep convolutional autoencoders,” Cognitive Systems Research, vol. 52, pp. 198–211, 2018.
 
 ## Publication
