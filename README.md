@@ -37,3 +37,4 @@ To the best of our knowledge, this is the first study on 1-D ECG signal using FC
 [3] O. Yildirim, R. San Tan,  and U. R. Acharya, “An  efficient compres-   sion of ecg signals using deep convolutional autoencoders,” Cognitive Systems Research, vol. 52, pp. 198–211, 2018.
 
 ## Publication
+H.-T. Chiang, Y.-Y. Hsieh, S.-W. Fu, K.-H. Hung, Y. Tsao, and S.-Y. Chien. Noisereduction in ecg signals using fully convo-lutional denoising autoencoders. IEEE Ac-cess, 7:60806–60813, 2019.
