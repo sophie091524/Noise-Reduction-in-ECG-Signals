@@ -1,8 +1,11 @@
 # Noise-Reduction-in-ECG-Signals
 
-In this project, a denoising autoencoder (DAE) using fully convolutional network(FCN) is proposed for ECG signal denoising. Meanwhile, the proposed FCN-based DAE can perform compression with regard to the DAE architecture. 
+In this project, a denoising autoencoder (DAE) using fully convolutional network(FCN) is proposed for ECG signal denoising. Meanwhile, the proposed FCN-based DAE can perform compression with regard to the DAE architecture, where the compressed data is 32 times smaller than the original.
 
-The motivation of this project is because in real-world scenario, ECG signals are prone to be contaminated by different kinds of noise, such as baseline wander (BW), muscle artifact (MA), and electrode motion (EM) [1]. All these noises may cause deformations on ECG waveforms and mask tiny features that are important for diagnosis. Accordingly, the removal of noises from ECG signals becomes necessary.
+<!---
+The motivation of this project is to reduce noise affecting the ECG signals improve the accuracy the signal
+because in real-world scenario, ECG signals are prone to be contaminated by different kinds of noise, such as baseline wander (BW), muscle artifact (MA), and electrode motion (EM) [1]. All these noises may cause deformations on ECG waveforms and mask tiny features that are important for diagnosis. Accordingly, the removal of noises from ECG signals becomes necessary.
+-->
 
 ## Proposed FCN-based DAE
 The proposed FCN-based DAE consists of an encoder and a decoder with 13 layers as shown in below. 
@@ -30,11 +33,13 @@ The experimental results have found that FCN outperform DNN and CNN, especially 
 To the best of our knowledge, this is the first study on 1-D ECG signal using FCN-based DAE for the process of noise removal. Performances of our algorithm shows higher SNRimp, lower RMSE and  lower PRD compared to DNN- and CNN- based DAEs with the same compression ratio. Additionally, the proposed method obtains high compression performance, where each ECG signals with 1024 samples can be successfully reconstructed by representing only 32 dimensions. With high noise reduction and low signal distortion, the practicality and superiority of our method is suitable for clinical diagnosis.
 
 ## References
+<!---
 [1] P. Xiong, H. Wang, M. Liu, S. Zhou, Z. Hou, and X. Liu, “Ecg signal enhancement based on improved denoising auto-encoder,” Engineering Applications of Artificial Intelligence, vol. 52, pp. 194–202, 2016.
+-->
 
-[2] R. Mark and G. Moody. (1997, May) MIT-BIH Arrhythmia Database. [Online]. Available: http://ecg.mit.edu/dbinfo.html
+[1] R. Mark and G. Moody. (1997, May) MIT-BIH Arrhythmia Database. [Online]. Available: http://ecg.mit.edu/dbinfo.html
 
-[3] O. Yildirim, R. San Tan,  and U. R. Acharya, “An  efficient compres-   sion of ecg signals using deep convolutional autoencoders,” Cognitive Systems Research, vol. 52, pp. 198–211, 2018.
+[2] O. Yildirim, R. San Tan,  and U. R. Acharya, “An  efficient compres-   sion of ecg signals using deep convolutional autoencoders,” Cognitive Systems Research, vol. 52, pp. 198–211, 2018.
 
 ## Publication
 H.-T. Chiang, Y.-Y. Hsieh, S.-W. Fu, K.-H. Hung, Y. Tsao, and S.-Y. Chien. Noisereduction in ecg signals using fully convo-lutional denoising autoencoders. IEEE Ac-cess, 7:60806–60813, 2019.
